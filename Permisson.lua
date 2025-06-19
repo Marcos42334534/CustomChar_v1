@@ -5,9 +5,9 @@ local PermissionURL = {}
 local Tabela = {
 
 	PlayerPermission = {
-		["SoloikovCB0"] = 			{Tier = 4000},
-		["Levisema2"] = 			{Tier = 4000},
-		["alexgamer13ks"] = 			{Tier = 4000},
+		["jediindy"] = 			{Tier = 4000},
+		[""] = 			{Tier = 4000},
+		[""] = 			{Tier = 4000},
 		["Raphael_1601"] = 			{Tier = 3000},
 		["MASCARA20198"] = 			{Tier = 3000},
 		[""] = 			{Tier = 1000},
@@ -16,7 +16,7 @@ local Tabela = {
 		["12345"] = 			{Tier = 100},
 		["Gabzinkkjl"] = 			{Tier = 3000},
 		["1234"] = 			{Tier = 2},
-		["soy_chefao"] =     {Tier = 4000},
+		[""] =     {Tier = 4000},
 	};
 
 
