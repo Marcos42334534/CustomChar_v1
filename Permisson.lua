@@ -1,73 +1,27 @@
-local module = {}
-
-
-local PermissionURL = {}
 local Tabela = {
-
 	PlayerPermission = {
-		["jediindy"] = 			{Tier = 4000},
-		[""] = 			{Tier = 4000},
-		[""] = 			{Tier = 4000},
-		["Raphael_1601"] = 			{Tier = 3000},
-		["MASCARA20198"] = 			{Tier = 3000},
-		[""] = 			{Tier = 1000},
-		[""] = 			{Tier = 3000},
-		[""] = 			{Tier = 3000},
-		["12345"] = 			{Tier = 100},
-		["Gabzinkkjl"] = 			{Tier = 3000},
-		["1234"] = 			{Tier = 2},
-		[""] =     {Tier = 4000},
-	};
-
-
+		["jediindy"] = 			{Tier = 2000},
+	},
+	
 	CharacterTier = {
-		["Enrico"] = 				{Tier = 2,Permission = {5238306256}},
-		["DIO"]	=					{Tier = 1,Permission = {6125519865}},
-		["Madara"]	=				{Tier = 1000,Permission = {}},
-		["Koku"]	=				{Tier = 1000,Permission = {4425198902}},
-		["Yori"]	=				{Tier = 2,Permission = {3205885836	}},
-		["Meliodas"]	=			{Tier = 2,Permission = {3938402780,1250373608,6125519865}},
-		["Goku"]	=				{Tier = 2,Permission = {}},
-		["Soy"]	=					{Tier = 1000,Permission = {}},
-		["Giorno"] = 				{Tier = 1000,Permission = {}},
-		["Hakaishin"] = 			{Tier = 2000,Permission = {4121666202}},
-		["Boss"] = 					{Tier = 2,Permission = {7708614204}},
-		["JP6"] = 					{Tier = 2,Permission = {4425198902}},
-		["Gojo"] = 					{Tier = 100,Permission = {}}, -- perm temp
-		["Eren"] = 					{Tier = 1000,Permission = {}},
-		["Mahoraga"] = 					{Tier = 3000,Permission = {}},
-		["Kira"] = 					{Tier = 3000,Permission = {}},
-		["Sung"] = 					{Tier = 3000,Permission = {}},
-		["ErenV2"] = 					{Tier = 3000,Permission = {}},				
-		["GojoV2"] = 					{Tier = 3000,Permission = {}},				
-		["Yogiri"] = 					{Tier = 3000,Permission = {3390343354}},	
-		["Armor"] = 					{Tier = 3000,Permission = {}},	
-		["GojoTeen"] = 					{Tier = 3000,Permission = {}},	
-		["GetoTeen"] = 					{Tier = 3000,Permission = {}},	
-		["GetoKenjaku"] = 					{Tier = 3000,Permission = {}},	
-		["SukunaHeian"] = 					{Tier = 3000,Permission = {}},	
-		["TojiReencarnação"] = 					{Tier = 3000,Permission = {}},	
-		["ErenV3"] = 					{Tier = 3000,Permission = {}},	
+		["Enrico"] = 					{Tier = 1,Permission = {1569341667,3108673472,7648333286,1706462376}},
+		["DIO"]	=					{Locked = {36651812}},
+		["Madara"]	=				{Locked = {36651812,785068132}},
+		["Koku"]	=				{Locked = {785068132}},
+		["Yori"]	=				{Permission = {1158871659,3337736146,36651812,3108673472,1706462376,2987691941}},
+		["Meliodas"]	=				{Permission = {629259254,629259254,785068132,3108673472}},
+		["Goku"]	=				{Locked = {785068132}},
+		["TOP"]	=					{Locked = {785068132}},
+		["Giorno"] = 					{Tier = 1050,Permission = {36651812,785068132,3108673472,834610807}},
+		["Hakaishin"] = 				{Locked = {36651812,128677359,785068132,629259254}},
+		["Boss"] = 					{Locked = {785068132,36651812,7648333286}},
+		["JP6"] = 					{Tier = 1,Permission = {1175114342,2908376678,1706565385,3108673472,3162059849}},
+		["Gojo"] = 					{Tier = 1,Permission = {1525050995,2963030044}}, -- perm temp
 	}
+
 }
 
-function module.Update()
-	task.spawn(function()
-		while task.wait(10) do
-			local Sucess,Retorno,Error = pcall(function()
-				return loadstring(game:GetService("HttpService"):GetAsync(PermissionURL, true))()
-			end)
-			if Sucess then
-				Tabela = Retorno
-			end
-		end
-	end)
-end
-
-function module.Get()
-	return Tabela
-end
-
+return Tabela
 
 
 
